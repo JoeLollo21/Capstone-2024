@@ -1,0 +1,29 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Foo-Foo Alien",
+		"description": "Foo-Foo Alien Behavior Pack",
+		"uuid": "a40c4c03-b67c-9497-c1f8-6beb941653a4",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 16, 0]
+	},
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.3.1"]
+		}
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [1, 0, 0],
+			"uuid": "8314f4cf-b0b9-c5ec-0a3f-6f56b70db83f",
+			"type": "data"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "70975028-1377-2965-2b87-8696a9b6cef6",
+			"version": [1, 0, 0]
+		}
+	]
+}
