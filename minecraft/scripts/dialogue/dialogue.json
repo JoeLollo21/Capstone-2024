@@ -1,0 +1,863 @@
+{
+   "format_version": "1.17.20",
+   "minecraft:npc_dialogue": {
+      "scenes": [
+         {
+            "scene_tag": "Intro_1",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Greetings Captain! My name is 3OM-1, but you can call me Bomi! (=^◕ω◕^=) \n",
+            "buttons": [
+               {
+                  "name": "Nice to meet you",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",	
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_2"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Intro_2",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "You too! I'll be your virtual companion and help guide you through the abandoned ship. (=^◕◡◕^=)",
+            "buttons": [
+               {
+                  "name": "Great!",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",	
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_3"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Intro_3",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Our friend got sick fighting the space pigs last week, but we have found some kind of research ship that appears to be abandoned. (;=^◕ω◕^=)\n\nWe might be able to find a cure, along with whatever we can salvage! (=^ΦωΦ^=) ",
+            "buttons": [
+               {
+                  "name": "I'm in!",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",				  
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_4"
+                  ]
+               },
+               {
+                  "name": "Wait...",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",				  
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_4"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Intro_4",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Don't worry! We have an official intergalactic salvaging license, it's perfectly legal!  (=^◕◡◕^=)\n\nAnyways, we should probably head to the [Bridge] first, so we can get records of the ship's research and cargo. (=^ΦωΦ^=) \n",
+            "buttons": [
+               {
+                  "name": "Okay...",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",				  
+                     "dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_5"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Intro_5",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Any questions before we enter the [Landing Bay]? You can also open the compass any time that you need me! (=^◕ω◕^=)",
+            "buttons": [
+               {
+                  "name": "Why are we here?",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",		
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_6"
+                  ]
+               },
+               {
+                  "name": "Nope, let's go!",
+                  "commands": [ 
+				     "/scoreboard players set @initiator level 0",
+                     "/tp @initiator 536.81 271.00 40.32 facing 536 272 30"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Intro_6",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We're here to get a cure for Missy and maybe some loot! (=^ΦωΦ^=)",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     "/playsound mob.cat.meow @initiator",	
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @initiator Intro_5"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_None",
+            "npc_name": "???",
+            "text": "You need to find the Captain's Log and the Captain's Response",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Captain_1",
+            "npc_name": "???",
+            "text": "You need to find the Captain's Response",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Captain_2",
+            "npc_name": "???",
+            "text": "You need to find the Captain's Log.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Success",
+            "npc_name": "???",
+            "text": "You may now begin verification.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q1",
+            "npc_name": "???",
+            "text": "What planet is the Dragon Tear on?",
+            "buttons": [
+               {
+                  "name": "Earth",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "Aldebaran II",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1_Correct"
+                  ]
+               },
+			   {
+                  "name": "Hoth",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "Bibberuta IV",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1_Incorrect"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q1_Correct",
+            "npc_name": "???",
+            "text": "Correct, you may proceed to the next question.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q1_Incorrect",
+            "npc_name": "???",
+            "text": "Incorrect, try again.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q1"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q2",
+            "npc_name": "???",
+            "text": "When was the Captain last heard from?",
+            "buttons": [
+               {
+                  "name": "10 days ago",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "7 days ago",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "2 days ago",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "1 day ago",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2_Correct"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q2_Correct",
+            "npc_name": "???",
+            "text": "Correct! Verification now completed, red doors unlocked",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    ""
+                  ]
+               }
+            ],
+			"on_close_commands":[
+                    "/function doors_level_3",
+					"/scoreboard players set @a level 2",
+					"/structure load screen_1 535 272 -69",
+					"/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_None",
+					"/function check_verification",
+					"/dialogue change @e[type=npc,c=1,tag=walter2] Walter_Verification_1",
+					"/dialogue change @e[type=npc,c=1,tag=walter1] Walter_Verification_1"
+					
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Q2_Incorrect",
+            "npc_name": "???",
+            "text": "Incorrect, try again.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_1_Q2"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_None",
+            "npc_name": "???",
+            "text": "You need to find an article from the Newer York Times, the Galactix Codex, and [REDACTED].",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_NYT",
+            "npc_name": "???",
+            "text": "You need to find a article from the Galactix Codex, and [REDACTED].",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Codex",
+            "npc_name": "???",
+            "text": "You need to find a article from the Newer York Times, and [REDACTED].",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Classified",
+            "npc_name": "???",
+            "text": "You need to find a article from the Newer York Times, and the Galactic Codex.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_NYT_Codex",
+            "npc_name": "???",
+            "text": "You need to find [REDACTED]",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_NYT_Classified",
+            "npc_name": "???",
+            "text": "You need to find an article from the Galactic Codex.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Codex_Classified",
+            "npc_name": "???",
+            "text": "You need to find an article from the Newer York Times.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Success",
+            "npc_name": "???",
+            "text": "You may now begin a second round of verification.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q1",
+            "npc_name": "???",
+            "text": "According to our knowledge of the aliens, what does the Dragon's Tear power?",
+            "buttons": [
+               {
+                  "name": "Warships",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1_Correct"
+                  ]
+               },
+			   {
+                  "name": "Their Stars",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "Time Portals",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "Redstone",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1_Incorrect"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q1_Correct",
+            "npc_name": "???",
+            "text": "Correct, you may proceed to the next question.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q2"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q1_Incorrect",
+            "npc_name": "???",
+            "text": "Incorrect, please try again.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q1"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q2",
+            "npc_name": "???",
+            "text": "Did a famous pilot hit an object in an asteroid belt?",
+            "buttons": [
+               {
+                  "name": "Yes",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q2_Correct"
+                  ]
+               },
+			   {
+                  "name": "No",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q2_Incorrect"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q2_Correct",
+            "npc_name": "???",
+            "text": "Correct, you may proceed to the next question.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q2_Incorrect",
+            "npc_name": "???",
+            "text": "Incorrect, please try again.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q2"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q3",
+            "npc_name": "???",
+            "text": "What time is the top intergalactic security administrators meeting?",
+            "buttons": [
+               {
+                  "name": "12:00",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "03:00",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3_Incorrect"
+                  ]
+               },
+			   {
+                  "name": "08:00",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3_Correct"
+                  ]
+               },
+			   {
+                  "name": "06:00",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3_Incorrect"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q3_Correct",
+            "npc_name": "???",
+            "text": "Correct! Verification now completed, full access granted.",
+            "buttons": [
+               {
+                  "name": "Yes!",
+                  "commands": [
+				    ""
+                  ]
+               }
+            ],
+			"on_close_commands":[
+					"/scoreboard players set @a level 3",
+					"/structure load screen_2 535 272 -69",
+					"/function doors_level_final",
+					"/dialogue open @e[type=npc,c=1,tag=bomi] @p Act_3",
+					"/dialogue change @e[type=npc,c=1,tag=walter1] @p Walter_Verification_2",
+					"/dialogue change @e[type=npc,c=1,tag=walter2] @p Walter_Verification_2"
+            ]
+         },
+		 {
+            "scene_tag": "Verification_2_Q3_Incorrect",
+            "npc_name": "???",
+            "text": "Incorrect, please try again.",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				    "/dialogue open @e[type=npc,c=1,tag=???] @initiator Verification_2_Q3"
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Act_0",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": " Let's try and find our way to the bridge. (=^◕ω◕^=)",
+            "buttons": [
+               {
+                  "name": "To the bridge!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Act_0_Data",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Look, an [Encrypted Data] drive! Exploring the ship is the most important! But we should still look out for some more data. That way, we can find out what happened here! (=^◕ω◕^=)",
+            "buttons": [
+               {
+                  "name": "I'll keep an eye",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Act_0_Electrical",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "To restore the power, we need to navigate through this maze of cables. Remember, if you get lost, just follow the red wire on the ground. (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Thanks Bomi!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Act_1",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We did it! Now that power is restored, we can continue on our search for the bridge! Let's hurry so we can cure Missy! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "YAY!",
+                  "commands": [
+                    ""
+                  ]
+               }
+            ],
+			"on_close_commands":[
+					""
+            ]
+         },
+         {
+            "scene_tag": "Act_1_Bridge",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Darn, we need a [Yellow Keycard] to unlock the [Bridge]. Let's retrace our steps and try to find one. Have we checked the [Crew Quarters] yet? (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Wish me luck!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Act_1_Card",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Great, you found the [Yellow Keycard], now let's get to the [Bridge] and check the computers for information! I bet it has info on the [Dragon Tear] to help Missy! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Let's go!",
+                  "commands": [
+                    ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Act_1_Quarters",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "To unlock the computer we should head to the [Captain's Quarter] to get more info, it should be one of the yellow doors. (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Gotcha!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Act_1_Quarters_Log",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We got the [Captain's Response] ! I sure hope nothing bad happened to them! And I hope Missy is ok... (;=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Nice! Me too...",
+                  "commands": [
+                     "dialogue open @e[type=npc,c=1] @p[scores={level=5}] Act_1_Quarters_Log_a",
+					 "dialogue open @e[type=npc,c=1] @p[scores={level=7..8}] Act_2"
+                  ]
+               }
+            ],
+			"on_close_commands":[
+                    "/scoreboard players set @p[scores={level=7}] level 8"
+            ]
+         },
+		 {
+            "scene_tag": "Act_1_Quarters_Log_a",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Let's go to the [Bridge] and get more info on where the Captain is! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "On it!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Act_2",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "The Captain must still be on board somewhere, the only places we haven't checked are behind red doors, let's find the [Red Keycard]. (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Let's go!",
+                  "commands": [
+                     ""
+                  ]
+               },
+			   {
+                  "name": "Already done",
+                  "commands": [
+                     "/teleport @p[tag=captain,scores={level=8},tag=security] 804 132 -45",
+					 "/scoreboard players set @p[tag=captain,scores={level=8},tag=security] level 9",
+					 "dialogue open @e[type=npc,c=1] @p[scores={level=9}] Act_3"
+                  ]
+               }
+
+            ]
+         },
+         {
+            "scene_tag": "Act_3",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Let's find the Captain! I'm sure that they're behind the [Pink Door] in the [Medbay]! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "For Missy!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]			
+         },
+		 {
+            "scene_tag": "end",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Thanks for playing! We hope you had fun and that you'll join us when the game is finished! (=^◕ω◕^=)\n"		
+         },
+		 {
+            "scene_tag": "Red_Card",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "You found a [Red Keycard] , that might come in handy later. But now's not the time, we must find more information. (=^◕ω◕^=)\n",
+			"buttons": [
+			   {
+				  "name": "Cool!",
+				  "commands": [
+					 ""
+				  ]
+			   }
+			],
+			"on_close_commands":[
+					"tag @p[tag=!card] add card"
+            ]			
+         },
+		 {
+            "scene_tag": "misinfo_1",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "\"Captain: We have arrive in orbit over the planet Aldebaran II. Our scans are detecting aliens near the Dragon Tear. I will try to make contact today!\"\n\nWow! We might have found the Dragon Tear! What do you think is going on here? (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]			
+         },
+		 {
+            "scene_tag": "misinfo_2",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "\"Starcorp Rep: Captain! We have not heard from you in the past 24 hours! Are you ok? Is everything under control?\"\n\nOh man. What do you think happened to the captain? Do you think he actually talked to the aliens on the planet? (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]	
+         },
+		 {
+            "scene_tag": "misinfo_3",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "\"Aldebaran II is a rocky planet with a breathable atmosphere. There have been reports of aliens on the surface that have used energy from the Dragon Tear to power warships and other deadly weapons.\"\n\nWhat do you think is going on, I thought the Dragon Tear was used to heal. Will this be good for Missy? (;=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]			
+         },
+		 {
+            "scene_tag": "misinfo_4",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "\"I was flying my ship past Aldebaran II when an alien spaceship began to follow me! I managed to lose it in the asteroid belt but I had to stop at Earth and repair.\"\n\n\"This poor pilot! It was probably the FooFoo aliens from Aldebaran II. They must be making sure no one takes the Tear. Do you think the story is true, why or why not? (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]	
+         },
+         {
+            "scene_tag": "misinfo_5",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "\"TOP SECRET: Alien spyships spotted over New Mexico, US, Planet Earth, Sol System. Top intergalactic security administrators are meeting at 08:00 Hours to discuss further actions.\"\n\nDo you think the captain was actually sent to Aldebaran II to spy on the aliens here? I bet the aliens were also spying on us! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]			
+         },
+         {
+            "scene_tag": "misinfo_captain",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Is…that the captain? He must have frozen himself to protect him from the aliens. We should probably just get out of here. The aliens are bad news! I think we should leave…what do you think? (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "[Turn & talk]",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]			
+         },
+         {
+            "scene_tag": "Verification_1_Bomi",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "The AI told us need to find two messages, the [Captain's Log] and [Captain's Response]! Let's try looking in the [Bridge] and the [Captain's Quarter]! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Verification_2_Bomi",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "The AI told us need to find a article from the Newer York Times, the Galactix Codex, and a classified document, lets check the [Red Rooms]. (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Okay",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+		 {
+            "scene_tag": "Verification_1_Bomi_Success",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We found all the Captain's messages! Let's go to the [Bridge] and unlock the computer! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Yay!",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Verification_2_Bomi_Success",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We found all the documents! Let's go back to the computer at  the [Bridge] and find out where the [Captain] is! (=^◕ω◕^=)\n",
+            "buttons": [
+               {
+                  "name": "Alright!",
+                  "commands": [
+				     ""
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
+

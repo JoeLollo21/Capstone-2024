@@ -1,1 +1,46 @@
-
+{
+   "format_version": "1.17.20",
+   "minecraft:npc_dialogue": {
+      "scenes": [
+         {
+            "scene_tag": "Cryo_Bomi_1",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "We can unfreeze the Captain now! (=^ΦωΦ^=)",
+            "buttons": [
+               {
+                  "name": "We did it!",
+                  "commands": [
+                     "/dialogue open @e[type=npc,c=1,tag=???] @p Cryo_Walter_1"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Cryo_Walter_1",
+            "npc_name": "\"Walter\"",
+            "text": "Marvelous! But judging by the amount of time he has been frozen, it’s likely that his vital organs have stopped functioning. If you unfreeze him, he might get really sick! -_-",
+            "buttons": [
+               {
+                  "name": "Oh no!",
+                  "commands": [
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @p Cryo_Bomi_2"
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Cryo_Bomi_2",
+            "npc_name": "30M-1 \"Bomi\"",
+            "text": "Hmm, that’s a good point. We already know that the aliens are hostile and that they have the Dragon Tear, plus we could use it to heal the captain too!\n \nDo you think the captain will have anything important to say that could help us, even if he gets sick? What would Missy think? (;=^◕ω◕^=)",
+            "buttons": [
+               {
+                  "name": "Let's see...",
+                  "commands": [
+                     "/dialogue open @e[type=npc,c=1,tag=bomi] @p Act_3"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

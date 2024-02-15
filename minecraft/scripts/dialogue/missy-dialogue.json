@@ -1,0 +1,20 @@
+{
+   "format_version": "1.17.20",
+   "minecraft:npc_dialogue": {
+      "scenes": [
+         {
+            "scene_tag": "Missy_Cryo",
+            "npc_name": "Missy",
+            "text": "Protocol Alpha Alpha? I've never heard, but maybe it means that the FooFoo Aliens made the Captain sick? If we unfreeze him, we might all get infected! *Cough Cough* But we need that Dragon Tear...",
+            "buttons": [
+               {
+                  "name": "Oh dear...",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

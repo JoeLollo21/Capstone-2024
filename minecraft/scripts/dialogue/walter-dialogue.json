@@ -1,0 +1,59 @@
+{
+   "format_version": "1.17.20",
+   "minecraft:npc_dialogue": {
+      "scenes": [
+	     {
+            "scene_tag": "Walter_Start",
+            "npc_name": "Walter",
+            "text": "Scanning... Human detected. Greetings. I am Walter, the ship's computer companion. My memory core is corrupted. Assistance needed for power restoration. Locate the electrical room. Restore power.",
+            "buttons": [
+               {
+                  "name": "On it!",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Walter_Power",
+            "npc_name": "Walter",
+            "text": "Memory core is 20% restored. Assistance needed for memory restoration. Verify identity at Bridge computer.",
+            "buttons": [
+               {
+                  "name": "Yessir",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Walter_Verification_1",
+            "npc_name": "Walter",
+            "text": "Memory core is 60% restored. Further assistance needed for memory restoration.",
+            "buttons": [
+               {
+                  "name": "Okie Dokie",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         },
+         {
+            "scene_tag": "Walter_Verification_2",
+            "npc_name": "Walter",
+            "text": "Memory core is restored. StarCorps Protocol Alpha Alpha Initiated. Captain is safe.\n",
+            "buttons": [
+               {
+                  "name": "That's a relief",
+                  "commands": [
+                     ""
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
