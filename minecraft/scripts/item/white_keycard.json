@@ -2,29 +2,29 @@
   "format_version":"1.16.100",
   "minecraft:item":{
     "description":{
-      "identifier":"dialog:bomi_menu",
+      "identifier":"misinfo:white_keycard",
       "category":"items"
     },
     "components":{
       "minecraft:on_use": {
         "on_use": {
-          "event": "open_menu",
+          "event": "end_game",
           "target": "self"
         }
       },
       "minecraft:foil": true,
       "minecraft:icon":{
-         "texture":"compass_item"
+         "texture":"white_keycard"
       },
       "minecraft:display_name": {
-         "value": "§r§l§5Call Bomi §r§e§ [Right Click]"
+         "value": "§r§f§lWhite Keycard §r§e[Right Click]"
       }
     },
     "events":{
-      "open_menu":{
+      "end_game":{
         "run_command":{
           "command":[
-            "function hints"
+            "function end"
           ]
         }
       }

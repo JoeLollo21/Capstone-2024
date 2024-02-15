@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "misinfo:white_keycard_fragment",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 4,
+			"minecraft:icon": {
+				"texture": "white_keycard_fragment"
+			},
+			"minecraft:display_name": {
+				"value": "§r§f§lWhite Keycard Fragment"
+			}		
+		}
+	}
+}
