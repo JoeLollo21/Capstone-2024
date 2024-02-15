@@ -1,1 +1,29 @@
-A
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "misinfo:white_keycard"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "misinfo:white_keycard_fragment"
+            },
+            {
+                "item": "misinfo:white_keycard_fragment"
+            },
+			{
+                "item": "misinfo:white_keycard_fragment"
+            },
+            {
+                "item": "misinfo:white_keycard_fragment"
+            }
+        ],
+        "result": {
+            "item": "misinfo:white_keycard",
+            "count": 1
+        }
+    }
+}
