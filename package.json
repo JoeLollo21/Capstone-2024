@@ -1,0 +1,26 @@
+{
+    "name": "tmp",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "react-scripts": "1.0.13"
+    },
+    "dependencies": {
+        "d3": "^4.10.2",
+        "d3-request": "^1.0.6",
+        "gh-pages": "^1.0.0",
+        "material-ui": "^0.19.1",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-ga": "^2.3.4",
+        "react-inlinesvg": "^0.6.2",
+        "svg-react-loader": "^0.4.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "deploy": "npm run build&&gh-pages -d build"
+    }
+}
