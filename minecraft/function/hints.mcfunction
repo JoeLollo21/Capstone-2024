@@ -1,0 +1,10 @@
+dialogue open @e[type=npc,c=1,tag=bomi] @a[scores={level=0},tag=!powermaze] Act_0
+dialogue open @e[type=npc,c=1,tag=bomi] @a[scores={level=0},tag=powermaze] Act_0_Electrical
+dialogue open @e[type=npc,c=1,tag=bomi] @a[scores={level=1},tag=!bridge,tag=!verification_1] Act_1
+dialogue open @e[type=npc,c=1,tag=bomi] @a[scores={level=1},tag=bridge,tag=!verification_1,tag=!yellow_keycard] Act_1_Bridge
+dialogue open @e[type=npc,c=1,tag=bomi] @a[scores={level=1},tag=yellow_keycard,tag=!verification_1] Act_1_Card
+dialogue open @e[type=npc,c=1,tag=bomi] @p[scores={level=1},tag=verification_1,tag=!verification_1_success] Verification_1_Bomi
+dialogue open @e[type=npc,c=1,tag=bomi] @p[scores={level=2},tag=verification_2,tag=!verification_2_success] Verification_2_Bomi
+dialogue open @e[type=npc,c=1,tag=bomi] @p[scores={level=1},tag=verification_1_success] Verification_1_Bomi_Success
+dialogue open @e[type=npc,c=1,tag=bomi] @p[scores={level=2},tag=verification_2_success] Verification_2_Bomi_Success
+dialogue open @e[type=npc,c=1,tag=bomi] @p[scores={level=3}] Act_3
