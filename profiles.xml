@@ -1,7 +1,4 @@
----
-layout: base
-permalink: /profiles.njk
----
+<?xml version="1.0" encoding="UTF-8"?>
 <component name="InspectionProjectProfileManager">
   <settings>
     <option name="USE_PROJECT_PROFILE" value="false" />
